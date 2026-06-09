@@ -1,0 +1,492 @@
+/* ── Page shell ─────────────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+
+.back svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.back:hover {
+  color: #111827;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.headerLabel {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.destination {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ── Main ────────────────────────────────────────────────────────── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ── Summary strip ───────────────────────────────────────────────── */
+.summaryStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4338ca;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  padding: 0.35rem 0.85rem;
+  border-radius: 99px;
+}
+
+/* ── Section ─────────────────────────────────────────────────────── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sectionIcon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* ── Card grid ───────────────────────────────────────────────────── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Card ────────────────────────────────────────────────────────── */
+.card {
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.2rem;
+  line-height: 1.3;
+}
+
+.cardSub {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.price {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.priceAmount {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.stars {
+  display: flex;
+  gap: 1px;
+  font-size: 0.9rem;
+}
+
+.starFilled { color: #f59e0b; }
+.starEmpty  { color: #d1d5db; }
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingBadge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #10b981;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
+}
+
+.reviewCount {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+}
+
+.categoryBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.activityPrice {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.free {
+  font-weight: 600;
+  color: #10b981;
+}
+
+.mustSeeBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #f59e0b;
+  padding: 0.25rem 0.6rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Calendar section ────────────────────────────────────────────── */
+.calSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.calTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.calDays {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Day card ─────────────────────────────────────────────────────── */
+.dayCard {
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.arrivalDay   { border-color: #a5b4fc; }
+.departureDay { border-color: #fca5a5; }
+.freeDay      { border-color: #d1fae5; }
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  background: #f9fafb;
+}
+
+.dayNum {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.dayDate {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+.dayBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badgeArrival   { background: #eef2ff; color: #4338ca; }
+.badgeDeparture { background: #fef2f2; color: #dc2626; }
+.badgeFree      { background: #d1fae5; color: #065f46; }
+
+.freeDayText {
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Timeline ─────────────────────────────────────────────────────── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  gap: 0;
+}
+
+/* Arrival / departure milestones */
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+}
+
+.milestoneTime {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  width: 4.5rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.milestoneDot {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.milestoneLabel {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Activity / place events */
+.timelineEvent {
+  display: grid;
+  grid-template-columns: 4.5rem 1.5rem 1fr;
+  gap: 0 0.75rem;
+  align-items: stretch;
+}
+
+.timePair {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  padding: 0.5rem 0;
+}
+
+.timeStart {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.timeEnd {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+/* Vertical track */
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.trackDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.trackLine {
+  flex: 1;
+  width: 2px;
+  background: #e5e7eb;
+  margin: 3px 0;
+}
+
+/* Event card */
+.eventCard {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.eventTop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.eventIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.eventName {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.eventBadge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.18rem 0.5rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.eventMeta {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.mustSee {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #f59e0b;
+  padding: 0.18rem 0.5rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+/* ── Plan ID footer ──────────────────────────────────────────────── */
+.planId {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  font-family: monospace;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .header { padding: 0.9rem 1rem; }
+  .destination { font-size: 1.1rem; }
+  .main { padding: 1.25rem 1rem; }
+}

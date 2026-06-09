@@ -1,0 +1,353 @@
+/* ── Main content ────────────────────────────────────────────────── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: padding-bottom 0.3s ease;
+}
+
+/* ── Section ─────────────────────────────────────────────────────── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sectionIcon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.sectionCount {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9ca3af;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  margin-left: 0.25rem;
+}
+
+/* ── Card grid ───────────────────────────────────────────────────── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Card ────────────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  outline: none;
+}
+
+.card:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.cardSelected {
+  border-color: #6366f1;
+  background: #fafafe;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+}
+
+.cardSelected:hover {
+  border-color: #4f46e5;
+}
+
+/* ── Checkmark ───────────────────────────────────────────────────── */
+.checkmark {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.cardSelected .checkmark {
+  border-color: #6366f1;
+  background: #6366f1;
+}
+
+.checkmark svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #ffffff;
+}
+
+/* ── Card content ────────────────────────────────────────────────── */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-right: 1.75rem; /* space for checkmark */
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.2rem;
+  line-height: 1.3;
+}
+
+.cardSub {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Hotel-specific ──────────────────────────────────────────────── */
+.price {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.priceAmount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.stars {
+  display: flex;
+  gap: 1px;
+  font-size: 0.9rem;
+}
+
+.starFilled { color: #f59e0b; }
+.starEmpty  { color: #d1d5db; }
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingBadge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #10b981;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
+}
+
+.reviewCount {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  pointer-events: none;
+}
+
+/* ── Activity-specific ───────────────────────────────────────────── */
+.categoryBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.activityPrice {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.free {
+  font-weight: 600;
+  color: #10b981;
+}
+
+/* ── Place-specific ──────────────────────────────────────────────── */
+.mustSeeBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: #f59e0b;
+  padding: 0.25rem 0.6rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* ── Sticky Plan Bar ─────────────────────────────────────────────── */
+.planBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #1e1b4b;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+}
+
+.planBarVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.planBarSummary {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #c7d2fe;
+  margin: 0 0 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.createPlanBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  background: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.createPlanBtn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.createPlanBtn:hover {
+  background: #e0e7ff;
+}
+
+.createPlanBtn:active {
+  transform: scale(0.97);
+}
+
+.createPlanBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.planBarError {
+  font-size: 0.75rem;
+  color: #fca5a5;
+  margin: 0;
+}
+
+.spinner {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 2px solid #1e1b4b;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .main {
+    padding: 1.25rem 1rem;
+  }
+
+  .planBar {
+    padding: 0.9rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .createPlanBtn {
+    justify-content: center;
+  }
+}
