@@ -1,4 +1,4 @@
-import { Client, types } from "cassandra-driver";
+import { Client, auth, types } from "cassandra-driver";
 
 const KEYSPACE = "travel";
 
@@ -61,9 +61,17 @@ async function initSchema(client: Client): Promise<void> {
 export async function getCassandraClient(): Promise<Client> {
   if (global._cassandraClient) return global._cassandraClient;
 
+  const user = process.env.CASSANDRA_USER;
+  const password = process.env.CASSANDRA_PASSWORD;
+
   const client = new Client({
     contactPoints: [process.env.CASSANDRA_HOST ?? "localhost"],
     localDataCenter: process.env.CASSANDRA_DC ?? "datacenter1",
+    // Auth is only sent when credentials are provided, so local auth-less
+    // dev keeps working while Railway connects to an authenticated cluster.
+    ...(user && password
+      ? { authProvider: new auth.PlainTextAuthProvider(user, password) }
+      : {}),
   });
 
   await client.connect();
